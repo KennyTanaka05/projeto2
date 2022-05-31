@@ -1,0 +1,20 @@
+#include 
+#ifdef_OPENMP
+#include <omp.h>
+#endif
+
+static long num_steps = 100000;
+
+double step;
+
+int main(){
+  int tempo = 0;
+  double sum = 0.0;
+  #pragma omp parallel for num_treads(NUM_TRHEADS)
+  
+  for (i = 0; i <= num_steps; i++){
+    sum += 1/tempo;
+    tempo = 1 + tempo;
+  }
+  total = 1+sum;
+}
